@@ -1,4 +1,5 @@
-import {Schema, model} from 'mongoose'
+import {Schema, model, Model} from 'mongoose'
+import IContact from '../interfaces/IContact'
 
 const ContactSchema: Schema = new Schema({
     firstName: {
@@ -21,4 +22,4 @@ const ContactSchema: Schema = new Schema({
     timestamps: true
 });
 
-export const ContactModel = model('contact', ContactSchema);
+export const ContactModel:Model<IContact> = model<IContact>('contact', ContactSchema);

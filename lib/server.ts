@@ -13,6 +13,3 @@ app.addRoute('/contact', contacts.router);
 
 //start app server
 app.start();
-
-
-
