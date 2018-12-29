@@ -1,21 +1,18 @@
-import app from './app'
-import * as https from 'https';
-import * as fs from 'fs'
+import App from './app'
+import ContactRoute from './routes/Contact'
 
-const {PORT = 3000} = process.env
+//initialize port, default to 3000
+const port: number = parseInt(<string>process.env.PORT, 10)|| 3000; 
+const app = new App(port);
 
-const httpsOptions = {
-    key: fs.readFileSync('./config/key.pem', 'utf8'),
-    cert: fs.readFileSync('./config/server.crt', 'utf8')
-}
+//initialize routing handlers here:
+const contacts = new ContactRoute();
 
-app.listen(PORT, ()=>{
-    console.log(`Server listening on port: ${PORT}`)
-})
+//add handlers to accompanying routes
+app.addRoute('/contact', contacts.router);
 
-/* For testing with https */
-/*
-https.createServer(httpsOptions, app).listen(PORT, ()=>{
-     console.log(`Server listening on port: ${PORT}`)
-})
-*/
+//start app server
+app.start();
+
+
+

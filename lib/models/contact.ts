@@ -1,8 +1,6 @@
-import * as mongoose from 'mongoose'
+import {Schema, model} from 'mongoose'
 
-const Schema = mongoose.Schema
-
-export const ContactSchema = new Schema({
+const ContactSchema: Schema = new Schema({
     firstName: {
         type: String,
         required: 'Enter a first name'
@@ -22,3 +20,5 @@ export const ContactSchema = new Schema({
 }, {
     timestamps: true
 });
+
+export const ContactModel = model('contact', ContactSchema);
