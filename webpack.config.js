@@ -1,14 +1,15 @@
 
-var webpack = require('webpack');
-var path = require('path');
-var fs = require('fs');
+const webpack = require('webpack');
+const path = require('path');
+const fs = require('fs');
 
-var nodeModules = {};
+const nodeModules = {};
+
 fs.readdirSync('node_modules')
-  .filter(function (x) {
+  .filter((x) => {
     return ['.bin'].indexOf(x) === -1;
   })
-  .forEach(function (mod) {
+  .forEach((mod) => {
     nodeModules[mod] = 'commonjs ' + mod;
   });
 
@@ -30,5 +31,9 @@ module.exports = {
       { test: /\.tsx?$/, loader: 'ts-loader' }
     ]
   },
+  node: {
+    __dirname : false
+  },
+  target: 'node',
   externals: nodeModules
 };

@@ -1,6 +1,7 @@
 import App from './app'
 import ContactRoute from './routes/Contact'
 
+
 //initialize port, default to 3000
 const port: number = parseInt(<string>process.env.PORT, 10)|| 3000; 
 const app = new App(port);

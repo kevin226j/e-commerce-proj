@@ -2,8 +2,11 @@ import * as express from 'express'
 import * as http from 'http'
 import * as bodyParser from 'body-parser'
 import * as mongoose from 'mongoose'
-import * as dotenv from "dotenv";
+import * as dotenv from 'dotenv'
+import * as path from 'path'
+// import * as webpack from 'webpack'
 
+// const webpackConfig = require('../webpack.config.js');
 
 export default class App {
 
@@ -12,7 +15,6 @@ export default class App {
     private db: mongoose.Connection;
     private routes: express.Router[] = [];
     private mode: string;
-
     public port: number
 
     constructor(port: number) {
@@ -62,9 +64,29 @@ export default class App {
 
 
     public start(): void {
+
+        //Listen to app on specified port
         this.app.listen(this.app.get('port'), () => {
             console.log(`server running on port: ${this.port} - ${this.mode} mode.`);
         })
+
+
+        //serve production files 
+        this.app.get('/', (req: express.Request, res : express.Response) => {
+            res.sendFile(path.resolve(__dirname, '..', 'dist', 'public', 'index.html'));
+        });
+
+
+        //set up webpack middleware
+        // let compiler = webpack(webpackConfig);
+        // this.app.use(require('webpack-dev-middleware')(compiler, {
+        //     noInfo: true, publicPath: webpackConfig.output.publicPath, stats: {colors: true}
+        // }));
+        // this.app.use(require('webpack-hot-middleware')(compiler));
+
+
+        //serve client side files from dist folder
+        this.app.use(express.static(path.resolve(__dirname, '..', 'dist', 'public')));
     }
 
 }
