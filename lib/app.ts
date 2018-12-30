@@ -87,6 +87,9 @@ export default class App {
 
         //serve client side files from dist folder
         this.app.use(express.static(path.resolve(__dirname, '..', 'dist', 'public')));
+
+        //serve static files
+        this.app.use(express.static(path.resolve(__dirname, '..', 'src', 'assets')));
     }
 
 }

@@ -6,6 +6,8 @@
 /out-tsc
 /build
 /dist
+/assets
+
 # dependencies
 /node_modules
 
