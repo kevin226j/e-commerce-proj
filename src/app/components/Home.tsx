@@ -1,19 +1,14 @@
 import * as React from 'react'
 
-interface IProps {
-    compiler: string,
-    framework: string,
-    bundler: string
-}
 
-export class Hello extends React.Component<IProps, {}> {
+export class Home extends React.Component<{}, any> {
     render() {
         return (
             <React.Fragment>
                 <header className="section-header">
                     <nav className="navbar navbar-landing navbar-expand-lg navbar-dark bg-dark">
                         <div className="container">
-                            <a className="navbar-brand mr-auto" href="#"> <img className="logo" src="/images/logo-white.png" /> LOGO</a>
+                            <a className="navbar-brand mr-auto" href="#"> <img className="logo" src={require("../../assets/images/logo-white.png")} /> LOGO</a>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
@@ -55,7 +50,7 @@ export class Hello extends React.Component<IProps, {}> {
                                 </header>
                             </div>
                             <div className="col-sm-6 text-right">
-                                <img src="/images/items/comp.png" className="img-fluid my-5" width="500" />
+                                <img src={require("../../assets/images/items/comp.png")} className="img-fluid my-5" width="500" />
                             </div>
                         </div>
                     </div>

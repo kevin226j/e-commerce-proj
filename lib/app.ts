@@ -89,7 +89,7 @@ export default class App {
         this.app.use(express.static(path.resolve(__dirname, '..', 'dist', 'public')));
 
         //serve static files
-        this.app.use(express.static(path.resolve(__dirname, '..', 'src', 'assets')));
+        //this.app.use(express.static(path.resolve(__dirname, '..', 'src', 'assets')));
     }
 
 }

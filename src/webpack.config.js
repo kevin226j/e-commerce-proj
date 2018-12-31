@@ -4,12 +4,17 @@ const path = require('path'),
 
 module.exports = {
     entry: {
-        app: ['./app/App.tsx'],
+        app: ['./app/index.tsx'],
         vendor: ['react', 'react-dom']
     },
     output: {
         path: path.resolve(__dirname, '..', 'dist', 'public'),
         filename: 'js/[name].bundle.js'
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
     },
     devtool: 'source-map',
     resolve: {
