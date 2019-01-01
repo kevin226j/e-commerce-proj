@@ -1,11 +1,13 @@
 import * as React from 'react'
-import Navigation from '../components/Navigation'
+import {Footer} from '../components/Footer'
 
-export const Layout : React.StatelessComponent<{}> = (props) => {
+export const Layout: React.StatelessComponent<{}> = (props) => {
     return (
         <React.Fragment>
-            <Navigation/>
+
             {props.children}
+
+            <Footer/>
         </React.Fragment>
     )
 }

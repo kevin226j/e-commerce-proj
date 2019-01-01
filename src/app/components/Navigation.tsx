@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 
 const Navigation: React.StatelessComponent<{}> = () => {
@@ -7,7 +7,7 @@ const Navigation: React.StatelessComponent<{}> = () => {
         <header className="section-header">
             <nav className="navbar navbar-landing navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
-                    <a className="navbar-brand mr-auto" href="/"> <img className="logo" src={require("../../assets/images/logo-white.png")} /> LOGO</a>
+                    <a className="navbar-brand mr-auto" href="/"> <img className="logo" src={require("../../assets/images/logo-white.png")} />E-Commerce</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -20,16 +20,19 @@ const Navigation: React.StatelessComponent<{}> = () => {
                                 <NavLink exact activeClassName='active' className="nav-link page-scroll" to="/test"> Test </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link page-scroll" href="#features">Features</a>
+                                <NavLink exact activeClassName='active' className="nav-link page-scroll" to="/login"> Login </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link page-scroll" href="#content">Content</a>
+                                <NavLink exact activeClassName='active' className="nav-link page-scroll" to="/register"> Register </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link page-scroll" href="#more">More info</a>
+                                <NavLink exact activeClassName='active' className="nav-link page-scroll" to="/products"> Products </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="http://bootstrap-ecommerce.com"> Download </a>
+                                <NavLink exact activeClassName='active' className="nav-link page-scroll" to="/cart"> Cart </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink exact activeClassName='active' className="nav-link page-scroll" to="/checkout"> Checkout </NavLink>
                             </li>
                         </ul>
                     </div>

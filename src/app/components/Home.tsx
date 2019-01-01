@@ -4,7 +4,7 @@ import { Layout } from '../layout/Layout'
 export class Home extends React.Component<{}, any> {
     render() {
         return (
-            <React.Fragment>
+            <Layout>
                 <section id="intro" className="section-intro bg-secondary pt-5">
                     <div className="container">
                         <div className="row d-flex" style={{ minHeight: '600px;' }}>
@@ -22,23 +22,7 @@ export class Home extends React.Component<{}, any> {
                         </div>
                     </div>
                 </section>
-
-                <footer className="section-footer bg-dark white">
-                    <div className="container">
-                        <section className="footer-bottom row">
-                            <div className="col-sm-6">
-                                <p> Made with &lt;3 <br />  by Vosidiy M.</p>
-                            </div>
-                            <div className="col-sm-6">
-                                <p className="text-sm-right">
-                                    Copyright © 2018 <br />
-                                    <a href="http://bootstrap-ecommerce.com">Bootstrap-ecommerce UI kit</a>
-                                </p>
-                            </div>
-                        </section>
-                    </div>
-                </footer>
-            </React.Fragment>
+            </Layout>
         )
     }
 }
