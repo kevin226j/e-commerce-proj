@@ -9,7 +9,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, '..', 'dist', 'public'),
-        filename: 'js/[name].bundle.js'
+        filename: 'js/[name].bundle.js',
+        publicPath: '/'
     },
     optimization: {
         splitChunks: {
@@ -19,6 +20,9 @@ module.exports = {
     devtool: 'source-map',
     resolve: {
         extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
+    },
+    devServer: {
+        historyApiFallback: true
     },
     module: {
         rules: [{
