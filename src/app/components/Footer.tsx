@@ -11,7 +11,6 @@ export const Footer: React.StatelessComponent<{}> = () => {
                     <div className="col-sm-6">
                         <p className="text-sm-right">
                             Copyright © 2018 <br />
-                            <a href="http://bootstrap-ecommerce.com">Bootstrap-ecommerce UI kit</a>
                         </p>
                     </div>
                 </section>

@@ -1,46 +1,66 @@
 import * as React from 'react'
 import { Layout } from '../layout/Layout'
+import { Input, Button, DropDown } from './common/form';
 
 export class Login extends React.Component<{}, any> {
     render() {
         return (
-            <Layout>
-                <section className="section-content padding-y-lg">
-                    <section className="section-content padding-y-lg">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-4 offset-md-4">
-                                    <div className="card">
-                                        <article className="card-body">
-                                            <a href="/register" className="float-right btn btn-outline-primary">Sign up</a>
-                                            <h4 className="card-title mb-4 mt-1">Sign in</h4>
-                                            <form>
-                                                <div className="form-group">
-                                                    <label>Your email</label>
-                                                    <input name="" className="form-control" placeholder="Email" type="email" />
-                                                </div>
-                                                <div className="form-group">
-                                                    <a className="float-right" href="#">Forgot?</a>
-                                                    <label>Your password</label>
-                                                    <input className="form-control" placeholder="******" type="password" />
-                                                </div>
-                                                <div className="form-group">
-                                                    <div className="checkbox">
-                                                        <label> <input type="checkbox" /> Save password </label>
-                                                    </div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <button type="submit" className="btn btn-primary btn-block"> Login  </button>
-                                                </div>
-                                            </form>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+            <Layout size={'large'}>
+                <div className="row">
+                    <div className="col-md-4 offset-md-4">
+                        <div className="card">
+                            <article className="card-body">
+                                <a href="/register" className="float-right btn btn-outline-primary">Sign up</a>
+                                <h4 className="card-title mb-4 mt-1">Sign in</h4>
+                                <br />
+                                <form>
+                                    <Input
+                                        name='email'
+                                        label='Your Email'
+                                        placeholder='Email'
+                                        value=''
+                                        type='email'
+                                        isIcon={false}
+                                        className='form-control'
+                                        onChange={() => console.log('hello')}
+                                    />
 
-                </section>
+                                    <Input
+                                        name='password'
+                                        label='Your Password'
+                                        placeholder='******'
+                                        value=''
+                                        type='password'
+                                        isIcon={false}
+                                        className='form-control'
+                                        onChange={() => console.log('hello')}
+                                    />
+
+                                    <div className="form-group">
+                                        <div className="checkbox">
+                                            <label> <input type="checkbox" /> Save password </label>
+                                        </div>
+                                    </div>
+                                    <DropDown
+                                        name='test'
+                                        label='Test'
+                                        selectedValue=''
+                                        width='25%'
+                                        options={[{key: '1',value: '1'}, {key: '2',value:'2'}]}
+                                        placeHolder='MM'
+                                        onChange={()=>console.log('hello')}
+                                    />
+
+                                    <Button
+                                        label="Login"
+                                        onClick={() => console.log('hello')}
+                                    />
+                                </form>
+                                <br />
+                            </article>
+                        </div>
+                    </div>
+                </div>
 
             </Layout>
         )
