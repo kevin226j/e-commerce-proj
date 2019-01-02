@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Layout } from '../layout/Layout';
-import { DropDown } from './common/form';
+import { Layout } from '../../layout/Layout';
+import { DropDown } from '../../components/common/form';
 
 
 export class Cart extends React.Component {
@@ -21,7 +21,7 @@ export class Cart extends React.Component {
                             <tr>
                                 <td>
                                     <figure className="media">
-                                        <div className="img-wrap"><img src={require("../../assets/images/items/1.jpg")} className="img-thumbnail img-sm" /></div>
+                                        <div className="img-wrap"><img src={require("../../../assets/images/items/1.jpg")} className="img-thumbnail img-sm" /></div>
                                         <figcaption className="media-body">
                                             <h6 className="title text-truncate">Product name goes here </h6>
                                             <dl className="dlist-inline small">
@@ -60,7 +60,7 @@ export class Cart extends React.Component {
                             <tr>
                                 <td>
                                     <figure className="media">
-                                        <div className="img-wrap"><img src={require("../../assets/images/items/2.jpg")} className="img-thumbnail img-sm" /></div>
+                                        <div className="img-wrap"><img src={require("../../../assets/images/items/2.jpg")} className="img-thumbnail img-sm" /></div>
                                         <figcaption className="media-body">
                                             <h6 className="title text-truncate">Product name goes here </h6>
                                             <dl className="dlist-inline small">
@@ -96,7 +96,7 @@ export class Cart extends React.Component {
                             <tr>
                                 <td>
                                     <figure className="media">
-                                        <div className="img-wrap"><img src={require("../../assets/images/items/3.jpg")} className="img-thumbnail img-sm" /></div>
+                                        <div className="img-wrap"><img src={require("../../../assets/images/items/3.jpg")} className="img-thumbnail img-sm" /></div>
                                         <figcaption className="media-body">
                                             <h6 className="title text-truncate">Product name goes here </h6>
                                             <dl className="dlist-inline small">

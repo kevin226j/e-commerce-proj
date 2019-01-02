@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Layout } from '../layout/Layout'
-import { Input, Button } from './common/form';
+import { Layout } from '../../layout/Layout'
+import { Input, Button } from '../../components/common/form';
 
 export class Register extends React.Component<{}, any> {
     render() {

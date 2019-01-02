@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Layout } from '../layout/Layout';
+import { Layout } from '../../layout/Layout';
 
 
 export class Checkout extends React.Component {
@@ -11,10 +11,10 @@ export class Checkout extends React.Component {
                         <article className="card">
                             <div className="card-body p-5">
                                 <h1>Billing</h1>
-                                <p> <img src={require("../../assets/images/icons/pay-visa.png")} />
-                                    <img src={require("../../assets/images/icons/pay-visa-el.png")} />
-                                    <img src={require("../../assets/images/icons/pay-mastercard.png")} />
-                                    <img src={require("../../assets/images/icons/pay-american-ex.png")} /> </p>
+                                <p> <img src={require("../../../assets/images/icons/pay-visa.png")} />
+                                    <img src={require("../../../assets/images/icons/pay-visa-el.png")} />
+                                    <img src={require("../../../assets/images/icons/pay-mastercard.png")} />
+                                    <img src={require("../../../assets/images/icons/pay-american-ex.png")} /> </p>
                                 <form role="form">
                                     <div className="form-group">
                                         <label htmlFor="username">Full name (on the card)</label>

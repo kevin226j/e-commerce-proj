@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Layout } from '../layout/Layout';
+import { Layout } from '../../layout/Layout';
 
 export class Error404 extends React.Component<{}, any> {
     render() {

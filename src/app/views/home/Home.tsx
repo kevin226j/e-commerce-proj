@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Footer } from './Footer';
+import { Footer } from '../../components/shared/Footer';
 
 
 export class Home extends React.Component<{}, any> {
@@ -17,7 +17,7 @@ export class Home extends React.Component<{}, any> {
                                 </header>
                             </div>
                             <div className="col-sm-6 text-right">
-                                <img src={require("../../assets/images/items/comp.png")} className="img-fluid my-5" width="500" />
+                                <img src={require("../../../assets/images/items/comp.png")} className="img-fluid my-5" width="500" />
                             </div>
                         </div>
                     </div>

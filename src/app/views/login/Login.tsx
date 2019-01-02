@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Layout } from '../layout/Layout'
-import { Input, Button, DropDown } from './common/form';
+import { Layout } from '../../layout/Layout'
+import { Input, Button, DropDown } from '../../components/common/form';
 
 export class Login extends React.Component<{}, any> {
     render() {
@@ -41,16 +41,6 @@ export class Login extends React.Component<{}, any> {
                                             <label> <input type="checkbox" /> Save password </label>
                                         </div>
                                     </div>
-                                    <DropDown
-                                        name='test'
-                                        label='Test'
-                                        selectedValue=''
-                                        width='25%'
-                                        options={[{key: '1',value: '1'}, {key: '2',value:'2'}]}
-                                        placeHolder='MM'
-                                        onChange={()=>console.log('hello')}
-                                    />
-
                                     <Button
                                         label="Login"
                                         onClick={() => console.log('hello')}

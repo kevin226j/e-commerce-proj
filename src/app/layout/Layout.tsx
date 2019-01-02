@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Footer } from '../components/Footer'
+import { Footer } from '../components/shared/Footer'
 
 export const Layout: React.StatelessComponent<{ size: string }> = (props) => {
     let _size: string = null;

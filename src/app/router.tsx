@@ -1,17 +1,17 @@
 import * as React from 'react'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 
-import Navigation from './components/Navigation'
+import Navigation from './components/shared/Navigation'
 
-import { Home } from './components/Home'
-import { Login } from './components/Login'
-import { Register } from './components/Register'
-import {Products} from './components/products/Products'
-import {ProductDetail} from './components/products/ProductDetail'
-import {Cart} from './components/Cart'
-import {Checkout} from './components/Checkout'
+import { Home } from './views/home/Home'
+import { Login } from './views/login/Login'
+import { Register } from './views/register/Register'
+import {Products} from './views/products/Products'
+import {ProductDetail} from './views/products/ProductDetail'
+import {Cart} from './views/cart/Cart'
+import {Checkout} from './views/checkout/Checkout'
 
-import {Error404} from './views/error404'
+import {Error404} from './views/error/error404'
 
 const AppRouter: React.StatelessComponent<{}> = () => {
     return (
