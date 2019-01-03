@@ -6,7 +6,7 @@ export const Footer: React.StatelessComponent<{}> = () => {
             <div className="container">
                 <section className="footer-bottom row">
                     <div className="col-sm-6">
-                        <p> Made with &lt;3 <br />  by Vosidiy M.</p>
+                        <p> Made with &lt;3 <br />  by Kevin226j</p>
                     </div>
                     <div className="col-sm-6">
                         <p className="text-sm-right">

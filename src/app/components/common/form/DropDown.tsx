@@ -7,12 +7,12 @@ export const DropDown: React.StatelessComponent<IDropDownListProps> = (props) =>
     });
  
     return (
-        <div className="form-group">
+        
             <select className={formatWrapperClass(props)} style={{ width: props.width }} value={props.selectedValue ? props.selectedValue : props.placeHolder} onChange={onChangeInput(props)} id={props.name}>
                 <option key={props.placeHolder} disabled={true}>{props.placeHolder}</option>
                 {options}
             </select>
-        </div>
+        
     )
 }
 
