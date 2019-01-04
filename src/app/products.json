@@ -1,0 +1,53 @@
+[{
+        "id": "123124rfsdfsf",
+        "productName": "Product Name 1",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Ut wisi enim ad minim veniam",
+        "productImage": "../../../assets/images/items/1.jpg",
+        "productPrice": "56",
+        "isFreeShipping": true,
+
+        "productModel": "1234",
+        "productColor": "blue",
+        "productDelivery": "US, Canada",
+        "productBeforePrice": "98"
+    },
+    {
+        "id": "fsdfnqk34j2r0f9sfjsoifd",
+        "productName": "Product Name 2",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Ut wisi enim ad minim veniam",
+        "productImage": "../../../assets/images/items/2.jpg",
+        "productPrice": "89",
+        "isFreeShipping": true,
+
+        "productModel": "4567",
+        "productColor": "red",
+        "productDelivery": "US, Canada",
+        "productBeforePrice": "150"
+    },
+    {
+        "id": "fs2324ldfmslkdmfsdf",
+        "productName": "Product Name 3",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Ut wisi enim ad minim veniam",
+        "productImage": "../../../assets/images/items/3.jpg",
+        "productPrice": "99",
+        "isFreeShipping": true,
+
+        "productModel": "3432fsf12",
+        "productColor": "black",
+        "productDelivery": "US, Canada",
+        "productBeforePrice": "150"
+    },
+    {
+        "id": "fsldkfnskdnf12312rw0rwe",
+        "productName": "Product Name 4",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Ut wisi enim ad minim veniam",
+        "productImage": "../../../assets/images/items/4.jpg",
+        "productPrice": "190",
+        "isFreeShipping": true,
+
+        "productModel": "312423123",
+        "productColor": "pink",
+        "productDelivery": "US, Canada",
+        "productBeforePrice": "650"
+    }
+]

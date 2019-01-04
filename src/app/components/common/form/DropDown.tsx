@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { IDropDownListProps } from '../interfaces'
+import { IDropDownListProps } from '../../../interfaces'
 
 export const DropDown: React.StatelessComponent<IDropDownListProps> = (props) => {
     var options = props.options.map((option) => {

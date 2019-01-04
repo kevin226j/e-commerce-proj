@@ -1,6 +1,6 @@
 export interface IInputProps {
     name: string;
-    value: string;
+    value: any;
     type: string;
     className: string;
     isIcon: boolean

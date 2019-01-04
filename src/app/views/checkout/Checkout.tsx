@@ -91,8 +91,6 @@ export class Checkout extends React.Component {
                         </article>
                     </div>
 
-
-
                     <div className="col-md-6">
                         <article className="card">
                             <div className="card-body p-5">
@@ -180,9 +178,6 @@ export class Checkout extends React.Component {
                                             />
                                         </div>
                                     </div>
-
-
-
                                     <Input
                                         name='phone'
                                         label='Phone'

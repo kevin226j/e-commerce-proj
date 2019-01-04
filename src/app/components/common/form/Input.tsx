@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IInputProps } from "../interfaces/IInputProp";
+import { IInputProps } from "../../../interfaces";
 
 
 export const Input: React.StatelessComponent<IInputProps> = (props) => {
