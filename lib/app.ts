@@ -4,9 +4,9 @@ import * as bodyParser from 'body-parser'
 import * as mongoose from 'mongoose'
 import * as dotenv from 'dotenv'
 import * as path from 'path'
-// import * as webpack from 'webpack'
+import * as cors from 'cors'
+import * as passport from 'passport'
 
-// const webpackConfig = require('../webpack.config.js');
 
 export default class App {
 
@@ -16,6 +16,7 @@ export default class App {
     private routes: express.Router[] = [];
     private mode: string;
     public port: number
+
 
     constructor(port: number) {
         this.app = express();
@@ -33,6 +34,13 @@ export default class App {
         //support application/x-www-form-urlencoded post data
         this.app.use(bodyParser.urlencoded({ extended: false }));
 
+        //initialize passport.js and create session
+        this.app.use(passport.initialize());
+        this.app.use(passport.session());
+
+        //cors
+        this.app.use(cors());
+
         //create server
         this.server = http.createServer(this.app);
 
@@ -44,7 +52,7 @@ export default class App {
     /* database set up. */
     private database(): void {
         (<any>mongoose).Promise = global.Promise;
-        mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true}); 
+        mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
         this.db = mongoose.connection;
         this.db.once('open', () => console.log('DB connected'));
 
@@ -56,9 +64,9 @@ export default class App {
 
     /* add routes to the application. */
     public addRoute(routeURL: string, routeHandler: express.Router): void {
-        if(this.routes.indexOf(routeHandler) === -1){
+        if (this.routes.indexOf(routeHandler) === -1) {
             this.routes.push();
-            this.app.use(routeURL,routeHandler);
+            this.app.use(routeURL, routeHandler);
         }
     }
 
@@ -72,7 +80,7 @@ export default class App {
 
 
         //serve production files 
-        this.app.get('/', (req: express.Request, res : express.Response) => {
+        this.app.get('/', (req: express.Request, res: express.Response) => {
             res.sendFile(path.resolve(__dirname, '..', 'dist', 'public', 'index.html'));
         });
 
